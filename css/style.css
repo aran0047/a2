@@ -1,0 +1,14 @@
+.header {
+  height: 200px;
+  background-image: url('/header_img.png');
+  background-size: contain;
+  text-align: center;
+  color: #ded44e;
+  font-family: 'Fira Code', monospace; 
+}
+
+#map{
+  background-color: rgb(0, 0, 0);
+  padding: 50px;
+  margin: auto;
+}

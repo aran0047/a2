@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI around the World</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <link rel = "stylesheet" href = "css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Title "Container" -->
+    <div class = "header">
+        <!--<img src = "header_img.png">-->
+        <h1>GLOBAL STATE OF ARTIFICIAL INTELLIGENCE</h1>
+    </div>
+
+    <p> Insert explanation of topic, domain ... Include relevance, and short description of leaders.</p>
+</br>
+    <p> The map below visualizes the different AI Index scores accross the globe for which data is available. Click on a country 
+        visualize its specific attribute scores.
+    </p>
+
+    <div id = "map">
+        <script type="text/javascript">
+            var specMap = "./map.json";
+            vegaEmbed('#map', specMap).then(function (result) {}).catch(console.error);
+        </script>
+    </div>
+
+    <h2>Attributes vs. AI Index</h2>
+
+        <div id = "scatter-index-talent">
+            <script type="text/javascript">
+                var specVis1 = "./scatter_index_talent.json";
+                vegaEmbed('#scatter-index-talent', specVis1).then(function (result) {}).catch(console.error);
+            </script>
+        
+        </div>
+        </br>
+
+        <div id = "scatter-index-research"></div>
+        <script type="text/javascript">
+            var specVis1 = "./scatter_index_research.json";
+            vegaEmbed('#scatter-index-research', specVis1).then(function (result) {}).catch(console.error);
+        </script>
+        <p>Explanation</p>
+        </br>
+
+        <div id = "scatter-index-oe"></div>
+        <script type="text/javascript">
+            var specVis1 = "./scatter_index_oe.json";
+            vegaEmbed('#scatter-index-research', specVis1).then(function (result) {}).catch(console.error);
+        </script>
+        <p>Explanation</p>
+        </br>
+
+        <div id = "scatter-index-infrastructure"></div>
+        <script type="text/javascript">
+            var specVis1 = "./scatter_index_infrastructure.json";
+            vegaEmbed('#scatter-index-infrastructure', specVis1).then(function (result) {}).catch(console.error);
+        </script>
+        <p>Explanation</p>
+        </br>
+
+        <div id = "scatter-index-development"></div>
+        <script type="text/javascript">
+        var specVis1 = "./scatter_index_development.json";
+        vegaEmbed('#scatter-index-development', specVis1).then(function (result) {}).catch(console.error);
+        </script>
+        <p>Explanation</p>
+        </br>
+
+        <div id = "scatter-index-commercial"></div>
+        <script type="text/javascript">
+            var specVis1 = "./scatter_index_commercial.json";
+            vegaEmbed('#scatter-index-commercial', specVis1).then(function (result) {}).catch(console.error);
+        </script>
+        <p>Explanation</p>
+    </div>
+
+</br>
+
+        <div id = "bar-top5"></div>
+        <script type="text/javascript">
+            var specVis1 = "./top5_bar.json";
+            vegaEmbed('#bar-top5', specVis1).then(function (result) {}).catch(console.error);
+        </script>
+        
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {"text": "Operating Environment vs. AI Index by Country"},
+    "data": {
+        "url": "AI_index_db.csv"
+    },
+    "mark": "circle",
+    "encoding": {
+        "x": {"field": "Operating Environment", "type": "quantitative"},
+        "y": {"field": "score", "type": "quantitative"},
+        "color": {
+            "field": "score",
+            "type": "quantitative",
+            "scale": {"scheme": "viridis"}
+        },
+        "tooltip": [
+            {"field": "Country", "type": "nominal"}, 
+            {"field": "Operating Environment", "type": "quantitative"},
+            {"field": "score", "type": "quantitative"}
+        ]
+    }
+}

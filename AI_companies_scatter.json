@@ -1,0 +1,29 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {"text": "Company # to AI Index"},
+    "data": {
+      "values": {"url": "AI_index_db.csv"} 
+    },
+    "transform": [
+    {
+        "lookup": "Total score",
+        "from": {
+            "data": {"url": "AI_index_db.csv"},
+            "key": "Country"
+        },
+        "as": "Index"
+    },
+    {
+        "lookup": "Number of employees",
+        "from": {
+            "data": {"url": "AI_Companies.csv"},
+            "key": "Country"
+        },
+        "as": "aaa"
+    }],
+    "mark": "point",
+    "encoding": {
+      "x": {"field": "aaa", "type": "quantitative"},
+      "y": {"field": "Index", "type": "quantitative"}
+    }
+  }
